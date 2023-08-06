@@ -1,0 +1,45 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(0.7turn, #210534, #430D4B);
+}
+
+.club-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+.club-name img {
+    border-radius: 50%;
+    border: 5px solid #671573;
+}
+
+.pages {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 80px;
+}
+
+.pages span {
+    font-size: 17px;
+    padding: 5px;
+    color: white;
+    font-weight: 300;
+    border: 5px solid transparent;
+}
+
+.pages span:hover {
+    font-size: 17px;
+    padding: 5px;
+    color: white;
+    font-weight: 300;
+    border: 5px solid #671573;
+    border-radius: 15px;
+    cursor: pointer;
+}
