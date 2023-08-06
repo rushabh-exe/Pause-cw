@@ -3,17 +3,18 @@ import './style/nav.css';
 function Nav() {
     return (
         <>
-            <nav>
-                <div className="club-name">
-                    <img src="./assets/pause-logo.jpg" alt="logo" style={{ height: '50px' }} />
+            <nav className='Navbar'>
+                <div className="Navbar-img">
+                    <a href=''>
+                        <img src="./assets/pause-logo.jpg" alt="logo" style={{ height: '50px' }} /></a>
                     <h3>PAUSE</h3>
                 </div>
-                <div className="pages">
-                    <span>Home</span>
-                    <span>Band</span>
-                    <span>Gallery</span>
-                    <span>Contact Us</span>
-                    <span>Join Us</span>
+                <div className="Navbar-nav">
+                    <li>Home</li>
+                    <li>Band</li>
+                    <li>Gallery</li>
+                    <li>Contact Us</li>
+                    <li>Join Us</li>
                 </div>
             </nav>
         </>
