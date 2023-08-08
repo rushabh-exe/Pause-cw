@@ -31,7 +31,7 @@ function Home() {
       <div className="club-info">
         <p> <strong>Lorem ipsum ad quisquam</strong> repellendus voluptate explicabo sed sunt vel sapiente itaque
           saepe.</p>
-        <img className="logo-b" src={require('./assets/pause-logo.jpg').default} alt='logo' style={{ height: '300px' }} />
+        <img className="logo-b" src='./assets/pause-logo.jpg' alt='logo' style={{ height: '300px' }} />
       </div>
       <div className="club-description">
         <div className="about-us">
