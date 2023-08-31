@@ -1,8 +1,17 @@
 .container {
   max-width: 80%;
   position: relative;
-  margin: 0 auto;
   padding: 0;
+  background: rgba(219, 198, 198, 0.2);
+  backdrop-filter: blur(5px);
+  margin-bottom: 50px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.flexcontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slider {
@@ -21,4 +30,56 @@
 
 .active-slide {
   display: block;
+}
+
+.panel1{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 5px;
+  padding-right: 5px;
+}
+.panelchild1{
+}
+.panelchild1 .slider{
+
+}
+@media (max-width: 1100px) {
+  .container {
+    max-width: 100%;
+    position: relative;
+    padding: 0;
+    background: rgba(219, 198, 198, 0.2);
+    backdrop-filter: blur(5px);
+    margin-bottom: 50px;
+    padding: 10px;
+  }
+  
+  .slider {
+    position: relative;
+    width: 100%;
+  }
+  .slider img {
+    width: 100%;
+  }
+  
+  .slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .active-slide {
+    display: block;
+  }
+  
+  .panel1{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 5px;
+  }
+  .panelchild1{
+  }
+  .panelchild1 .slider{
+  
+  }
 }

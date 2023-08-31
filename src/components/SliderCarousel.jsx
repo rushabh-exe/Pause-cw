@@ -6,8 +6,13 @@ const SliderCarousel = () => {
 
   const slides = [
     "./assets/side1.jpg",
-    "./assets/slide2.jpg",
-    "./assets/slide3.jpg"
+    "./assets/side1.jpg",
+    "./assets/side1.jpg"
+  ];
+  const resst = [
+    "./assets/test.jpg",
+    "./assets/test.jpg",
+    "./assets/test.jpg"
   ];
 
   useEffect(() => {
@@ -15,32 +20,62 @@ const SliderCarousel = () => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % slides.length);
     }, 1000);
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="container">
-      <div className="slider">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`slide ${index === activeIndex ? 'active-slide' : ''}`}
-          >
-            <img src={slide} alt={`Slide ${index + 1}`} />
+    <div className="flexcontainer">
+      <section className="container">
+        <div className="panel1">
+          <div>
+          <div className="slider">
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                className={`slide ${index === activeIndex ? 'active-slide' : ''}`}
+              >
+                <img src={slide} alt={`Slide ${index + 1}`} />
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-      <div className="slider">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`slide ${index === activeIndex ? 'active-slide' : ''}`}
-          >
-            <img src={slide} alt={`Slide ${index + 1}`} />
+          <div className="slider">
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                className={`slide ${index === activeIndex ? 'active-slide' : ''}`}
+              >
+                <img src={slide} alt={`Slide ${index + 1}`} />
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </section>
+          </div>
+          <div className="panelchild1">
+            <div className="slider">
+              {resst.map((slide, index) => (
+                <div
+                  key={index}
+                  className={`slide ${index === activeIndex ? 'active-slide' : ''}`}
+                >
+                  <img src={slide} alt={`Slide ${index + 1}`} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="panel2">
+          <div className="slider">
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                className={`slide ${index === activeIndex ? 'active-slide' : ''}`}
+              >
+                <img src={slide} alt={`Slide ${index + 1}`} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
