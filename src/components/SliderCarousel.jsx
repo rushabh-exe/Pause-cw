@@ -13,7 +13,7 @@ const SliderCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 1000); // Change slide every 5 seconds
+    }, 1000);
 
     return () => clearInterval(interval); 
   }, []);
