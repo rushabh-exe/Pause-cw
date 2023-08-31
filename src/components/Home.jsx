@@ -2,67 +2,64 @@ import React, { useState } from 'react';
 import './style/home.css';
 
 function Home() {
-  const images = ['./assets/side1.jpg', './assets/slide2.jpg', './assets/slide3.jpg'];
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeDiv, setActiveDiv] = useState(0);
 
-  const showImage = (index) => {
-    const imgElements = document.querySelectorAll(".mem-img img");
-    imgElements.forEach((image, i) => {
-      if (i === index) {
-        image.style.display = "block";
-      } else {
-        image.style.display = "none";
-      }
-    });
+  const handlePrev = () => {
+    setActiveDiv((prevActiveDiv) => Math.max(0, prevActiveDiv - 1));
   };
 
-  const prevImage = () => {
-    setCurrentIndex((currentIndex - 1 + images.length) % images.length);
-    showImage(currentIndex);
+  const handleNext = () => {
+    setActiveDiv((prevActiveDiv) => Math.min(2, prevActiveDiv + 1));
   };
-
-  const nextImage = () => {
-    setCurrentIndex((currentIndex + 1) % images.length);
-    showImage(currentIndex);
-  };
-
   return (
-    <main>
-      <div className="club-info">
-        <p> <strong>Lorem ipsum ad quisquam</strong> repellendus voluptate explicabo sed sunt vel sapiente itaque
-          saepe.</p>
-        <img className="logo-b" src='./assets/pause-logo.jpg' alt='logo' style={{ height: '300px' }} />
-      </div>
-      <div className="club-description">
-        <div className="about-us">
-          <div className="head">About Us</div>
-          <hr style={{ width: '50%', marginLeft: '25%' }} />
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At dolorem nostrum voluptates placeat
-            similique cum vero nam libero deserunt, odit quaerat necessitatibus, nihil magnam molestiae fugiat!
-            Velit magnam rem esse.</p>
+    <>
+      <div className="bllur1"></div>
+      <div className="bllur2"></div>
+      <div className="bllur3"></div>
+      <main>
+        <div className="club-info">
+          <p> <strong>Lorem ipsum ad quisquam</strong> repellendus voluptate explicabo sed sunt vel sapiente itaque
+            saepe.</p>
+          <img className="logo-b" src='./assets/pause-logo.jpg' alt='logo' style={{ height: '300px' }} />
         </div>
-        <div className="slide-section">
-          <img id="prevBtn" src="./assets/EpArrowLeftBold.svg" alt="" onClick={prevImage} />
-          <div className="mem-img">
-            {images.map((image, index) => (
-              <img key={index} src={image} alt="" style={{ display: index === currentIndex ? "block" : "none" }} />
-            ))}
+        <div className="club-description">
+          <div className="about-us">
+            <div
+              className={`${activeDiv === 0 ? '' : 'slide-out'
+                }`}
+              style={{ display: activeDiv === 0 ? 'block' : 'none' }}
+            >
+              <h2>About Us</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nesciunt provident, voluptatum facilis modi perferendis! Hic dolorum modi non veniam?</p>
+            </div>
+            <div
+              className={`${activeDiv === 1 ? '' : 'slide-out'
+                }`}
+              style={{ display: activeDiv === 1 ? 'block' : 'none' }}
+            >
+              <h3>What can you do here:</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis placeat nesciunt aperiam nostrum, magni sapiente?</p>
+            </div>
+            <div
+              className={`${activeDiv === 2 ? '' : 'slide-out'
+                }`}
+              style={{ display: activeDiv === 2 ? 'block' : 'none' }}
+            ><h3>Opportunities:</h3>
+              <p>
+                <button>events</button>
+                <button>compitions</button>
+                <button>prices</button>
+                <button>more</button>
+              </p>
+            </div>
           </div>
-          <img id="nextBtn" src="./assets/EpArrowRightBold.svg" alt="" onClick={nextImage} />
+          <div className="navigation-buttons">
+            <button onClick={handlePrev} disabled={activeDiv === 0}>Previous</button>
+            <button onClick={handleNext} disabled={activeDiv === 2}>Next</button>
+          </div>
         </div>
-      </div>
-      <div className="image-slideshow">
-        <div>
-          <img src="./assets/side1.jpg" alt="1" />
-        </div>
-        <div>
-          <img src="./assets/slide2.jpg" alt="2" />
-        </div>
-        <div>
-          <img src="./assets/slide3.jpg" alt="3" />
-        </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 }
 

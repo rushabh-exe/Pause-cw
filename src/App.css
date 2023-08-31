@@ -1,19 +1,35 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    
+
 }
-body{
-    background-color: black;
+
+body {
+    background-color: #131418;
 }
 
 ::-webkit-scrollbar {
     display: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
+
+/* Extra Small devices (xs) - 480px */
+@media (max-width: 480px) {}
+
+/* Small devices (sm) - 576px */
+@media (min-width: 481px) and (max-width: 576px) {}
+
+/* Medium devices (md) - 768px */
+@media (min-width: 577px) and (max-width: 768px) {}
+
+/* Large devices (lg) - 992px */
+@media (min-width: 769px) and (max-width: 992px) {}
+
+/* Extra Large devices (xl) - 1200px */
+@media (min-width: 993px) and (max-width: 1200px) {}
