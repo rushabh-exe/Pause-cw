@@ -5,8 +5,9 @@ main {
     align-items: center;
     gap: 10vh;
     height: 100%;
+    margin-top: 50px;
 }
-
+/* section 1*/
 .club-info {
     background: url(/public/assets/section1.jpg);
     width: 80%;
@@ -21,8 +22,10 @@ main {
 }
 
 .club-info p {
-    background-color: black;
-    width: 500px;
+    backdrop-filter: blur(100px);
+    background: rgba(219, 198, 198, 0.2);
+    padding: 5px;
+    width: 50%;
     font-size: 35px;
 }
 

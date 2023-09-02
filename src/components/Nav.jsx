@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
 import './style/nav.css';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+
 
 function Nav() {
     const [showMenu, setShowMenu] = useState(false);
@@ -19,11 +26,11 @@ function Nav() {
                 </div>
                 <div className={`Navbar-nav ${showMenu ? 'show' : ''}`}>
                     <ul>
-                        <li>Home</li>
-                        <li>Band</li>
-                        <li>Gallery</li>
-                        <li>Contact Us</li>
-                        <li>Join Us</li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/band">Band</Link></li>
+                        <li><Link to="/gallery">Gallery</Link></li>
+                        <li><Link to="/contactus">Contact Us</Link></li>
+                        <li><Link to="/joiningpage">Join Us</Link></li>
                     </ul>
                 </div>
                 <div className={`menu-button ${showMenu ? 'open' : ''}`} onClick={toggleMenu}>
