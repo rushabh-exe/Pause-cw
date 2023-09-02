@@ -3,11 +3,20 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-
+    user-select: none;
 }
 
 body {
-    background-color: #131418;
+    background-image: linear-gradient(
+        270deg,
+        hsl(240deg 100% 14%) 0%,
+        hsl(257deg 84% 16%) 25%,
+        hsl(270deg 77% 17%) 50%,
+        hsl(276deg 88% 14%) 75%,
+        hsl(282deg 100% 11%) 100%
+      );
+    background-blend-mode: overlay, hard-light, overlay, normal;
+    backdrop-filter: blur(200px);
 }
 
 ::-webkit-scrollbar {
