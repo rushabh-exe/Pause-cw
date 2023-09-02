@@ -1,4 +1,4 @@
-.stiker{
+.stiker {
     position: relative;
 }
 
@@ -55,7 +55,8 @@
     .Navbar-nav {
         display: none;
     }
-    body{
+
+    body {
         overflow-x: hidden;
     }
 }
@@ -104,6 +105,7 @@
     .Navbar {
         align-items: flex-start;
         padding: 10px 20px;
+
     }
 
     .Navbar-nav {
@@ -111,15 +113,6 @@
         flex-direction: column;
         align-items: flex-start;
         margin: 10px 0;
-        
-       
-    }
-
-    .Navbar-nav ul {
-        display: flex;
-        flex-direction: column;
-        text-align: right;
-        
     }
 
     .Navbar-nav.show {
@@ -130,19 +123,29 @@
         top: 0px;
         right: 0px;
         align-items: center;
-        transition: ease 0.5s;
+        opacity: 1;
     }
-    
+
+    .Navbar-nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+    }
 
     .menu-button {
         display: block;
         cursor: pointer;
         position: absolute;
-        top:27px;
+        top: 27px;
         right: 20px;
         margin-left: auto;
         background: transparent;
-        
+        cursor: pointer;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .menu-button.open {
+        transform: rotate(-180deg);
     }
 
     .bar {
@@ -150,6 +153,5 @@
         height: 3px;
         background-color: white;
         margin: 3px 0;
-       
     }
 }

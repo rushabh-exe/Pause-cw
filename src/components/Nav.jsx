@@ -18,9 +18,8 @@ function Nav() {
                         </a>
                         <h3>PAUSE</h3>
                     </div>
-
                 </nav>
-                <div className={`Navbar-nav ${showMenu ? 'show' : ''}`}>
+                <div className={`Navbar-nav ${showMenu ? 'show' : 'hide'}`}>
                     <ul>
                         <li>Home</li>
                         <li>Band</li>
@@ -29,7 +28,7 @@ function Nav() {
                         <li>Join Us</li>
                     </ul>
                 </div>
-                <div className="menu-button" onClick={toggleMenu}>
+                <div className={`menu-button ${showMenu ? 'open' : ''}`} onClick={toggleMenu}>
                     <div className="bar"></div>
                     <div className="bar"></div>
                     <div className="bar"></div>
