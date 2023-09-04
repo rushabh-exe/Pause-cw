@@ -1,4 +1,7 @@
-main {
+/* Main */
+.main {
+    position: absolute;
+    top: 80px;
     display: inline-flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -7,7 +10,19 @@ main {
     height: 100%;
     margin-top: 50px;
 }
-/* section 1*/
+
+/* Section 1 */
+.main2 {
+    position: absolute;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vh;
+    right: 0px;
+    width: 100%;
+}
+
 .club-info {
     background: url(/public/assets/section1.jpg);
     width: 80%;
@@ -29,15 +44,13 @@ main {
     font-size: 35px;
 }
 
-
 .logo-b {
     border-radius: 50%;
     -webkit-user-drag: none;
-    border: 4mm ridge rgb(255, 255, 255)
+    border: 4mm ridge rgb(255, 255, 255);
 }
 
-/*section2*/
-
+/* Section 2 */
 .club-description {
     background: url(/public/assets/section2.jpg);
     width: 80%;
@@ -82,7 +95,6 @@ main {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
@@ -92,20 +104,18 @@ main {
     from {
         opacity: 1;
     }
-
     to {
         opacity: 0;
     }
 }
 
-.about-us>div {
+.about-us > div {
     animation: dissolveIn 2s ease forwards;
 }
 
-.about-us>div.slide-out {
+.about-us > div.slide-out {
     animation: dissolveOut 2s ease forwards;
 }
-
 
 .about-us {
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -147,16 +157,58 @@ main {
     color: #fff;
 }
 
+/* Section 3 */
+.container {
+    max-width: 80%;
+    position: relative;
+    padding: 0;
+    background: rgba(219, 198, 198, 0.2);
+    backdrop-filter: blur(5px);
+    margin-bottom: 50px;
+    padding: 10px;
+    border-radius: 5px;
+}
 
+.flexcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+}
+
+.slider img {
+    width: 100%;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.active-slide {
+    display: block;
+}
+
+.panel1 {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 5px;
+    padding-right: 5px;
+}
 
 @media (max-width: 1100px) {
     .club-description {
         display: flex;
+        width: 95%;
         flex-direction: column;
         position: relative;
         align-items: center;
     }
-
 
     .about-us {
         height: 100%;
@@ -167,10 +219,10 @@ main {
     }
 
     .club-info {
+        width: 95%;
         border-radius: 40px;
-
-
         display: flex;
+        gap: 10px;
         flex-direction: column-reverse;
     }
 
@@ -179,99 +231,44 @@ main {
         width: 300px;
         height: 300px;
         -webkit-user-drag: none;
-
     }
 
     .club-info p {
         width: fit-content;
-        font-size: 20px;
+        font-size: 1.5em;
+    }
+    .container {
+        max-width: 100%;
+        position: relative;
+        padding: 0;
+        background: rgba(219, 198, 198, 0.2);
+        backdrop-filter: blur(5px);
+        margin-bottom: 50px;
+        padding: 10px;
+    }
+
+    .slider {
+        position: relative;
+        width: 100%;
+    }
+
+    .slider img {
+        width: 100%;
+    }
+
+    .slide {
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .active-slide {
+        display: block;
+    }
+
+    .panel1 {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        gap: 5px;
     }
 }
-
-
-/* section3  */
-.container {
-    max-width: 80%;
-    position: relative;
-    padding: 0;
-    background: rgba(219, 198, 198, 0.2);
-    backdrop-filter: blur(5px);
-    margin-bottom: 50px;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  .flexcontainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .slider {
-    position: relative;
-    width: 100%;
-  }
-  .slider img {
-    width: 100%;
-  }
-  
-  .slide {
-    display: none;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .active-slide {
-    display: block;
-  }
-  
-  .panel1{
-    display: grid;
-    grid-template-columns: 70% 30%;
-    gap: 5px;
-    padding-right: 5px;
-  }
-  .panelchild1{
-  }
-  .panelchild1 .slider{
-  
-  }
-  @media (max-width: 1100px) {
-    .container {
-      max-width: 100%;
-      position: relative;
-      padding: 0;
-      background: rgba(219, 198, 198, 0.2);
-      backdrop-filter: blur(5px);
-      margin-bottom: 50px;
-      padding: 10px;
-    }
-    
-    .slider {
-      position: relative;
-      width: 100%;
-    }
-    .slider img {
-      width: 100%;
-    }
-    
-    .slide {
-      display: none;
-      width: 100%;
-      height: 100%;
-    }
-    
-    .active-slide {
-      display: block;
-    }
-    
-    .panel1{
-      display: grid;
-      grid-template-columns: 70% 30%;
-      gap: 5px;
-    }
-    .panelchild1{
-    }
-    .panelchild1 .slider{
-    
-    }
-  }

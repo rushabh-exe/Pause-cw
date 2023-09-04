@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './style/home.css';
+// import Carousel from 'react-material-ui-carousel';
+// import { Paper } from '@material-ui/core';
 
-function Home() {
+function Home(props) {
+  // const images = [
+  //   { src: './assets/side1.jpg', alt: 'Image 1' },
+  //   { src: './assets/side1.jpg', alt: 'Image 2' },
+  //   { src: './assets/side1.jpg', alt: 'Image 3' },
+  // ];
+
   const [activeDiv, setActiveDiv] = useState(0);
 
   const handlePrev = () => {
@@ -33,7 +41,10 @@ function Home() {
     return () => clearInterval(interval);
   }, []);
   return (
+    <>
       <main>
+      </main>
+      <div className="main2">
         <div className="club-info">
           <p> <strong>Lorem ipsum ad quisquam</strong> repellendus voluptate explicabo sed sunt vel sapiente itaque
             saepe.</p>
@@ -127,7 +138,15 @@ function Home() {
             </div>
           </section>
         </div>
-      </main>
+        {/* <Carousel>
+          {images.map((image, index) => (
+            <Paper key={index}>
+              <img src={image.src} alt={image.alt} />
+            </Paper>
+          ))}
+        </Carousel> */}
+      </div>
+    </>
   );
 }
 

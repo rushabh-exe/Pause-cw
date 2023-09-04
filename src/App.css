@@ -18,7 +18,7 @@ body {
     background-blend-mode: overlay, hard-light, overlay, normal;
     backdrop-filter: blur(200px);
     overflow-x: hidden;
-    
+    position: relative;
 }
 
 ::-webkit-scrollbar {
