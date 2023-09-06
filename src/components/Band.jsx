@@ -1,6 +1,7 @@
 import React from 'react'
 import './style/home.css';
 import './style/band.css';
+import Footer from './Footer';
 function Band() {
   return (
     <>
@@ -67,6 +68,7 @@ function Band() {
             </div>
           </div>
         </div>
+        <Footer/>
       </div>
     </>
   )

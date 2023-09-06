@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './style/home.css';
-// import Carousel from 'react-material-ui-carousel';
-// import { Paper } from '@material-ui/core';
+import Carousel from 'react-material-ui-carousel';
+import { Paper } from '@material-ui/core';
+import Footer from './Footer'
+
 
 function Home(props) {
-  // const images = [
-  //   { src: './assets/side1.jpg', alt: 'Image 1' },
-  //   { src: './assets/side1.jpg', alt: 'Image 2' },
-  //   { src: './assets/side1.jpg', alt: 'Image 3' },
-  // ];
+  const images = [
+    { src: './assets/side1.jpg', alt: 'Image 1' },
+    { src: './assets/test.jpg', alt: 'Image 2' },
+    { src: './assets/slide2.jpg', alt: 'Image 3' },
+  ];
 
   const [activeDiv, setActiveDiv] = useState(0);
 
@@ -26,11 +28,6 @@ function Home(props) {
     "./assets/side1.jpg",
     "./assets/side1.jpg",
     "./assets/side1.jpg"
-  ];
-  const resst = [
-    "./assets/test.jpg",
-    "./assets/test.jpg",
-    "./assets/test.jpg"
   ];
 
   useEffect(() => {
@@ -86,65 +83,18 @@ function Home(props) {
             <button onClick={handleNext} disabled={activeDiv === 2}>Next</button>
           </div>
         </div>
-        <div className="flexcontainer">
-          <section className="container">
-            <div className="panel1">
-              <div>
-                <div className="slider">
-                  {slides.map((slide, index) => (
-                    <div
-                      key={index}
-                      className={`slide ${index === activeIndex ? 'active-slide' : ''}`}
-                    >
-                      <img src={slide} alt={`Slide ${index + 1}`} />
-                    </div>
-                  ))}
-                </div>
-                <div className="slider">
-                  {slides.map((slide, index) => (
-                    <div
-                      key={index}
-                      className={`slide ${index === activeIndex ? 'active-slide' : ''}`}
-                    >
-                      <img src={slide} alt={`Slide ${index + 1}`} />
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="panelchild1">
-                <div className="slider">
-                  {resst.map((slide, index) => (
-                    <div
-                      key={index}
-                      className={`slide ${index === activeIndex ? 'active-slide' : ''}`}
-                    >
-                      <img src={slide} alt={`Slide ${index + 1}`} />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div className="panel2">
-              <div className="slider">
-                {slides.map((slide, index) => (
-                  <div
-                    key={index}
-                    className={`slide ${index === activeIndex ? 'active-slide' : ''}`}
-                  >
-                    <img src={slide} alt={`Slide ${index + 1}`} />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        </div>
-        {/* <Carousel>
+        <Carousel className='carousel01'>
           {images.map((image, index) => (
-            <Paper key={index}>
-              <img src={image.src} alt={image.alt} />
+            <Paper key={index} style={{ width: '100%', height: '550px' }}>
+              <img
+                src={image.src}
+                alt={image.alt}
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
             </Paper>
           ))}
-        </Carousel> */}
+        </Carousel>
+        <Footer/>
       </div>
     </>
   );

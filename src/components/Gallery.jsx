@@ -3,6 +3,7 @@ import './style/gallery.css'
 import './style/home.css';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import Footer from './Footer';
 
 function srcset(image, size, rows = 1, cols = 1) {
   return {
@@ -18,41 +19,42 @@ export default function QuiltedImageList() {
       <main>
       </main>
       <div className="main2">
-      <div className="imgp">
-      <ImageList
-        variant="quilted"
-        cols={4}
+        <div className="imgp">
+          <ImageList
+            variant="quilted"
+            cols={4}
 
-      >
-        {itemData.map((item) => (
-          <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
-            <img
-              {...srcset(item.img, 121, item.rows, item.cols)}
-              alt={item.title}
-              loading="lazy"
-            />
-          </ImageListItem>
-        ))}
-      </ImageList>
-      <ImageList
-        variant="quilted"
-        cols={4}
+          >
+            {itemData.map((item) => (
+              <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+                <img
+                  {...srcset(item.img, 121, item.rows, item.cols)}
+                  alt={item.title}
+                  loading="lazy"
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+          <ImageList
+            variant="quilted"
+            cols={4}
 
-      >
-        {itemData.map((item) => (
-          <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
-            <img
-              {...srcset(item.img, 121, item.rows, item.cols)}
-              alt={item.title}
-              loading="lazy"
-            />
-          </ImageListItem>
-        ))}
-      </ImageList>
-    </div>
+          >
+            {itemData.map((item) => (
+              <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+                <img
+                  {...srcset(item.img, 121, item.rows, item.cols)}
+                  alt={item.title}
+                  loading="lazy"
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </div>
+        <Footer/>
       </div>
     </>
-    
+
   );
 }
 
