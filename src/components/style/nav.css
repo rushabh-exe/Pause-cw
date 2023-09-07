@@ -112,12 +112,10 @@
     font-weight: 800;
     letter-spacing: 4px;
     width: 150px;
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    user-select: none;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -276,13 +274,13 @@
 
     .Navbar>.Navbar-nav {
 
-        -webkit-animation: dissolveOut 2s ease forwards;
+        -webkit-animation: dissolveOut 0.4s ease forwards;
 
-        animation: dissolveOut 2s ease forwards;
+        animation: dissolveOut 0.4s ease forwards;
     }
 
     .Navbar>.Navbar-nav.show {
-        -webkit-animation: dissolveIn 2s ease forwards;
-        animation: dissolveIn 2s ease forwards;
+        -webkit-animation: dissolveIn 0.5s ease forwards;
+        animation: dissolveIn 0.5s ease forwards;
     }
 }
