@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './style/home.css';
 import Carousel from 'react-material-ui-carousel';
 import { Paper } from '@material-ui/core';
 import Footer from './Footer'
 
 
-function Home(props) {
+function Home() {
   const images = [
     { src: './assets/side1.jpg', alt: 'Image 1' },
     { src: './assets/test.jpg', alt: 'Image 2' },
@@ -22,21 +22,6 @@ function Home(props) {
     setActiveDiv((prevActiveDiv) => Math.min(2, prevActiveDiv + 1));
   };
 
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const slides = [
-    "./assets/side1.jpg",
-    "./assets/side1.jpg",
-    "./assets/side1.jpg"
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
   return (
     <>
       <main>

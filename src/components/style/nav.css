@@ -5,20 +5,34 @@
 }
 
 .Navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 10px;
+    background: -o-linear-gradient(198deg, #252525, #002128);
     background: linear-gradient(0.7turn, #252525, #002128);
     border-radius: 100px;
     margin: 12px 5px;
     background-color: transparent;
+    -webkit-box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .Navbar-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 5px;
     color: white;
@@ -37,17 +51,26 @@
 .Navbar-img img {
     border-radius: 50%;
     border: 5px solid #000000;
+    -webkit-box-shadow: 1px 1px 200px #ffffff;
     box-shadow: 1px 1px 200px #ffffff;
 }
 
 .Navbar-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: absolute;
     right: 15px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-right: 30px;
     background-color: transparent;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
@@ -63,8 +86,14 @@
 }
 
 .Navbar-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 10px;
     margin-right: 30px;
@@ -83,16 +112,26 @@
     font-weight: 800;
     letter-spacing: 4px;
     width: 150px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 .Navbar-nav li:hover {
+    -webkit-box-shadow: 1px 1px 200px #ffffff;
     box-shadow: 1px 1px 200px #ffffff;
     color: #fff;
     cursor: pointer;
+    background-color: rgb(7, 111, 95);
 }
 
 .menu-button {
@@ -104,29 +143,48 @@
 
 @media (max-width: 1100px) {
     .Navbar {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
         padding: 10px 20px;
     }
+
     .Navbar-nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         position: absolute;
         top: 15vh;
         right: -25px;
         border-radius: 50% 0 0 50%;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         background-color: transparent;
+        -webkit-backdrop-filter: blur(50px);
         backdrop-filter: blur(50px);
         padding: 55px;
         opacity: 0;
         z-index: 10;
+        -webkit-transform: translateX(150%);
+        -ms-transform: translateX(150%);
         transform: translateX(150%);
-        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: -10px 10px 55px rgba(94, 94, 94, 0.39), -10px -10px 55px rgba(94, 94, 94, 0.39);
+        box-shadow: -10px 10px 55px rgba(94, 94, 94, 0.39), -10px -10px 55px rgba(94, 94, 94, 0.39);
+        -webkit-transition: opacity 0.5s ease, -webkit-transform 0.9s ease;
+        transition: opacity 0.5s ease, -webkit-transform 0.9s ease;
+        -o-transition: opacity 0.5s ease, transform 0.9s ease;
         transition: opacity 0.5s ease, transform 0.9s ease;
+        transition: opacity 0.5s ease, transform 0.9s ease, -webkit-transform 0.9s ease;
     }
 
     .Navbar.show-menu .Navbar-nav {
         opacity: 1;
+        -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
         transform: translateX(0%);
     }
 
@@ -136,7 +194,12 @@
     }
 
     .Navbar-nav ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         text-align: right;
     }
@@ -150,10 +213,16 @@
         margin-left: auto;
         background: transparent;
         cursor: pointer;
+        -webkit-transition: -webkit-transform 0.5s ease-in-out;
+        transition: -webkit-transform 0.5s ease-in-out;
+        -o-transition: transform 0.5s ease-in-out;
         transition: transform 0.5s ease-in-out;
+        transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
     }
 
     .menu-button.open {
+        -webkit-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
         transform: rotate(-180deg);
     }
 
@@ -162,7 +231,17 @@
         height: 3px;
         background-color: white;
         margin: 3px 0;
-        
+
+    }
+
+    @-webkit-keyframes dissolveIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
     }
 
     @keyframes dissolveIn {
@@ -172,6 +251,16 @@
 
         to {
             opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes dissolveOut {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
         }
     }
 
@@ -187,10 +276,13 @@
 
     .Navbar>.Navbar-nav {
 
+        -webkit-animation: dissolveOut 2s ease forwards;
+
         animation: dissolveOut 2s ease forwards;
     }
 
     .Navbar>.Navbar-nav.show {
+        -webkit-animation: dissolveIn 2s ease forwards;
         animation: dissolveIn 2s ease forwards;
     }
 }

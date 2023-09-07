@@ -68,7 +68,7 @@ function Band() {
             </div>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </>
   )

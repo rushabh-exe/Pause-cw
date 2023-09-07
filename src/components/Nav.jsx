@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import './style/nav.css';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function Nav() {
@@ -19,8 +14,10 @@ function Nav() {
         <div className="stiker">
             <nav className={`Navbar ${showMenu ? 'show-menu' : ''}`}>
                 <div className="Navbar-img">
-                    <a href=''>
-                        <img src="./assets/pause-logo.jpg" alt="logo" style={{ height: '50px' }} />
+                    <a href='/'>
+                        <Link to="/">
+                            <img src="./assets/pause-logo.jpg" alt="logo" style={{ height: '50px' }} />
+                        </Link>
                     </a>
                     <h3>PAUSE</h3>
                 </div>
