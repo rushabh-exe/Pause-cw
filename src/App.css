@@ -9,6 +9,13 @@
   -ms-user-select: none;
   user-select: none;
 }
+html,body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  }
 
 body {
   background-image: -webkit-gradient(linear,
@@ -30,11 +37,8 @@ body {
       #191919 50%,
       #191919 75%,
       #000000 100%);
-  background-blend-mode: overlay, hard-light, overlay, normal;
   -webkit-backdrop-filter: blur(200px);
   backdrop-filter: blur(200px);
-  overflow-x: hidden;
-  position: relative;
 }
 
 ::-webkit-scrollbar {

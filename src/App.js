@@ -7,6 +7,7 @@ import Nav from './components/Nav';
 import Band from './components/Band';
 import Joinpage from './components/Joinpage';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/contactus" element={<Contact/>}>
           </Route>
         </Routes>
+        <Footer/>
       </Router>
       
     </>
