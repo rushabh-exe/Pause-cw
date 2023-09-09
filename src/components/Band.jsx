@@ -7,59 +7,11 @@ function Band() {
       <div className="card">
         <div className="card-image"></div>
         <div>
-          <div className="category">Illustration</div>
+          <div className="category">Rock</div>
           <div className="heading">
-            A heading that must span over two lines
+            Lorem ipsum, dolor sit amet consectetur adipisicing.
             <div className="author">
-              By <span className="name">Abi</span> 4 days ago
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="card">
-        <div className="card-image"></div>
-        <div>
-          <div className="category">Illustration</div>
-          <div className="heading">
-            A heading that must span over two lines
-            <div className="author">
-              By <span className="name">Abi</span> 4 days ago
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="card">
-        <div className="card-image"></div>
-        <div>
-          <div className="category">Illustration</div>
-          <div className="heading">
-            A heading that must span over two lines
-            <div className="author">
-              By <span className="name">Abi</span> 4 days ago
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="card">
-        <div className="card-image"></div>
-        <div>
-          <div className="category">Illustration</div>
-          <div className="heading">
-            A heading that must span over two lines
-            <div className="author">
-              By <span className="name">Abi</span> 4 days ago
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="card">
-        <div className="card-image"></div>
-        <div>
-          <div className="category">Illustration</div>
-          <div className="heading">
-            A heading that must span over two lines
-            <div className="author">
-              By <span className="name">Abi</span> 4 days ago
+              By <span className="name">test</span> 4 days ago
             </div>
           </div>
         </div>
