@@ -5,9 +5,11 @@
     width: 100%;
     margin-top: 10vh;
     gap: 15vh;
+    height: 100%;
 }
 
 .club-info {
+    border: 1px solid rgb(85, 85, 85);
     background: url(/public/assets/section1.jpg);
     width: 80%;
     color: white;
@@ -47,8 +49,9 @@
 
 /* Section 2 */
 .club-description {
+    border: 1px solid rgb(85, 85, 85);
     margin: 0 auto;
-    max-height: 460px;
+    max-height: 700px;
     width: 80%;
     color: white;
     display: -webkit-box;
@@ -193,6 +196,7 @@
     width: 80%;
     position: relative;
     margin: 0 auto;
+  
 }
 
 @media (max-width: 1100px) {
